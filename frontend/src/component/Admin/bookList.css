@@ -1,0 +1,121 @@
+.usersListContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#usersListHeading {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.637);
+  transition: all 0.5s;
+  margin: 2rem;
+  text-align: center;
+}
+
+.usersListTable {
+  background-color: white;
+  border: none !important;
+  flex: 1; /* Allow the table to take the remaining space */
+  overflow-y: auto; /* Scroll if content overflows */
+}
+
+.usersListTable div {
+  font: 300 1vmax "Roboto";
+  color: rgba(0, 0, 0, 0.678);
+  border: none !important;
+}
+
+.usersListTable a,
+.usersListTable button {
+  color: rgba(0, 0, 0, 0.527);
+  transition: all 0.5s;
+}
+
+.usersListTable a:hover {
+  color: tomato;
+}
+
+.usersListTable button:hover {
+  color: rgb(236, 30, 30);
+}
+
+.MuiDataGrid-columnHeader div {
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #f1f1f1;
+  text-align: center;
+  font: 300 1rem "Roboto";
+  color: rgba(0, 0, 0, 0.637);
+  border-top: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+@media screen and (max-width: 600px) {
+  .usersListTable div {
+    font: 300 4vw "Roboto";
+  }
+}
+
+.bookListContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#bookListHeading {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.637);
+  transition: all 0.5s;
+  margin: 2rem;
+  text-align: center;
+}
+
+.bookListTable {
+  background-color: white;
+  border: none !important;
+}
+
+.bookListTable div {
+  font: 300 1vmax "Roboto";
+  color: rgba(0, 0, 0, 0.678);
+  border: none !important;
+}
+
+.bookListTable a,
+.bookListTable button {
+  color: rgba(0, 0, 0, 0.527);
+  transition: all 0.5s;
+}
+
+.bookListTable a:hover {
+  color: tomato;
+}
+
+.bookListTable button:hover {
+  color: rgb(236, 30, 30);
+}
+
+.MuiDataGrid-columnHeader div {
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 600px) {
+  .bookListTable div {
+    font: 300 4vw "Roboto";
+  }
+}
+

@@ -13,13 +13,16 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     width: 150,
     crop: "scale",
   });
-
-  const { name, email, password } = req.body;
+  const { firstName, lastName, email, password, phoneNumber, dateOfBirth, address } = req.body;
 
   const user = await User.create({
-    name,
+    firstName,
+    lastName,
     email,
     password,
+    phoneNumber,
+    dateOfBirth,
+    address: JSON.parse(address), // Convert address string to object
     avatar: {
       public_id: myCloud.public_id,
       url: myCloud.secure_url,
@@ -176,7 +179,7 @@ exports.updatePassword = catchAsyncErrors(async (req, res, next) => {
 // update User Profile
 exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
   const newUserData = {
-    name: req.body.name,
+    name: req.body.firstName+" "+req.body.lastName,
     email: req.body.email,
   };
 
@@ -239,7 +242,7 @@ exports.getSingleUser = catchAsyncErrors(async (req, res, next) => {
 // update User Role -- Admin
 exports.updateUserRole = catchAsyncErrors(async (req, res, next) => {
   const newUserData = {
-    name: req.body.name,
+    name: req.body.firstName+" "+req.body.lastName,
     email: req.body.email,
     role: req.body.role,
   };

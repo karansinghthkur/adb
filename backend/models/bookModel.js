@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
-
-// Define Book Schema
+const validator = require("validator");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const crypto = require("crypto");
 const bookSchema = new mongoose.Schema({
   name: {
     type: String,

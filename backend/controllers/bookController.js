@@ -166,7 +166,7 @@ exports.createBookReview = catchAsyncErrors(async (req, res, next) => {
 
   const review = {
     user: req.user._id,
-    name: req.user.name,
+    name: req.user.firstName+" "+req.user.lastName,
     rating: Number(rating),
     comment,
   };

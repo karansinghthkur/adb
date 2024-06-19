@@ -21,12 +21,14 @@ app.use(fileUpload());
 const book = require("./routes/bookRoute");
 const user = require("./routes/userRoute");
 const order = require("./routes/orderRoute");
+const cart=require("./routes/cartRoute");
 const payment = require("./routes/paymentRoute");
 
 app.use("/api/v1", book);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
+app.use("/api/v1", cart);
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 

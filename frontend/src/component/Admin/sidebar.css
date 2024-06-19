@@ -1,0 +1,99 @@
+/* Apply hover effect to MuiSvgIcon within MuiTypography-root */
+.MuiTypography-root:hover .MuiSvgIcon-root {
+  fill: tomato; /* Change the fill color of the icon on hover */
+}
+
+.MuiTypography-root {
+  background-color: #fff !important;
+}
+
+/* Rest of your CSS remains unchanged */
+.sidebar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.sidebar > a:first-child {
+  padding: 0;
+}
+
+.sidebar > a > img {
+  margin-top: 70px;
+  width: 80%;
+  transition: all 0.5s;
+}
+
+.sidebar > a > img:hover {
+  filter: drop-shadow(0 0 10px tomato);
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.493);
+  font: 200 1rem "Roboto";
+  padding: 2rem;
+  transition: all 0.5s;
+  display: flex;
+  margin-left: 40px;
+  align-items: center; /* Align items vertically */
+}
+
+.sidebar a:hover {
+  color: tomato;
+  transform: scale(1.1);
+}
+
+.sidebar a > p {
+  margin-left: 1rem; /* Add margin between icon and text */
+}
+
+/* Apply hover effect to MuiSvgIcon within MuiTreeItem-iconContainer */
+.sidebar .MuiTreeItem-iconContainer:hover .MuiSvgIcon-root {
+  fill: tomato; /* Change the fill color of the icon on hover */
+}
+
+.sidebar a > .MuiSvgIcon-root {
+  margin-right: 0.5rem;
+  transition: fill 0.5s; /* Apply transition to the fill property */
+}
+
+.treeview-wrapper {
+  width: 100%;
+  overflow: hidden; /* Prevent overflowing content */
+}
+
+.treeview-wrapper .MuiTreeView-root {
+  margin-left: 60px;
+  padding-left: 2rem; /* Indent TreeView items */
+  width: calc(100% - 2rem); /* Limit the width to fit within the sidebar */
+}
+
+.treeview-wrapper .MuiTreeItem-root {
+  width: 100%;
+}
+
+.treeview-wrapper .MuiTreeItem-content {
+  display: flex;
+  align-items: center;
+}
+
+.treeview-wrapper .MuiTreeItem-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font: 200 1rem "Roboto";
+  color: rgba(0, 0, 0, 0.493);
+  transition: all 0.5s;
+  padding: 2rem 0; /* Match padding with other sidebar items */
+}
+
+.treeview-wrapper .MuiTreeItem-label:hover {
+  color: tomato;
+  transform: scale(1.1);
+}
+
+.treeview-wrapper .MuiTreeItem-iconContainer {
+  margin-right: 0.5rem;
+}

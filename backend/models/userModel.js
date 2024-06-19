@@ -5,11 +5,17 @@ const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 
 const userSchema = new mongoose.Schema({
-  name: {
+  firstName: {
     type: String,
-    required: [true, "Please Enter Your Name"],
-    maxLength: [30, "Name cannot exceed 30 characters"],
-    minLength: [4, "Name should have more than 4 characters"],
+    required: [true, "Please Enter Your First Name"],
+    maxLength: [30, "First Name cannot exceed 30 characters"],
+    minLength: [2, "First Name should have more than 2 characters"],
+  },
+  lastName: {
+    type: String,
+    required: [true, "Please Enter Your Last Name"],
+    maxLength: [30, "Last Name cannot exceed 30 characters"],
+    minLength: [2, "Last Name should have more than 2 characters"],
   },
   email: {
     type: String,
@@ -22,6 +28,23 @@ const userSchema = new mongoose.Schema({
     required: [true, "Please Enter Your Password"],
     minLength: [8, "Password should be greater than 8 characters"],
     select: false,
+  },
+  phoneNumber: {
+    type: String,
+    required: [true, "Please Enter Your Phone Number"],
+    minLength: [10, "Phone Number should have 10 digits"],
+    maxLength: [10, "Phone Number should have 10 digits"],
+  },
+  dateOfBirth: {
+    type: Date,
+    required: [true, "Please Enter Your Date of Birth"],
+  },
+  address: {
+    street: { type: String, required: true },
+    city: { type: String, required: true },
+    state: { type: String, required: true },
+    postalCode: { type: String, required: true },
+    country: { type: String, required: true },
   },
   avatar: {
     public_id: {
@@ -36,7 +59,7 @@ const userSchema = new mongoose.Schema({
   role: {
     type: String,
     default: "user",
-    enum: ["admin", "seller", "buyer"],
+    enum: ["admin", "seller", "user"],
   },
   createdAt: {
     type: Date,
